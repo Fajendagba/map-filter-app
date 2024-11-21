@@ -121,20 +121,12 @@
             }
 
             async initializeMap() {
-                // mapboxgl.accessToken = '1222';
-                // mapboxgl.accessToken = '{{ env('MAPBOX_ACCESS_TOKEN') }}';
-                // this.map = new mapboxgl.Map({
-                //     container: 'map',
-                //     style: 'mapbox://styles/mapbox/light-v10',
-                //     center: [-74.006, 40.7128],
-                //     zoom: 12
-                // });
-
+                mapboxgl.accessToken = '{{ env('MAPBOX_ACCESS_TOKEN') }}';
                 this.map = new mapboxgl.Map({
-                    container: "map",
-                    center: [120.3049, 31.4751],
-                    zoom: 12,
-                    testMode: true,
+                    container: 'map',
+                    style: 'mapbox://styles/mapbox/light-v10',
+                    center: [-74.006, 40.7128],
+                    zoom: 12
                 });
             }
 
